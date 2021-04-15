@@ -11,7 +11,7 @@
                 <li class="nav-item dropdown" ngbDropdown *ngIf = "currentUser$ | async">
                 <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle>Product</a>
                 <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-                    <a class="dropdown-item" routerLinkActive ='active' href="/members">Matches</a>
+                    <a class="dropdown-item" routerLinkActive ='active' href="/members">Members</a>
                     <a class="dropdown-item" routerLinkActive='active' href="/lists">Lists</a>
                     <a class="dropdown-item" routerLinkActive='active' href="/messages">Messages</a>
                 </div>
@@ -42,11 +42,13 @@
                 <button class="btn btn-outline-success my-2 my-sm-0">Login</button>
               </div>
             </form>
-            <ul class="navbar-nav mr-left">
-            <li class="nav-item dropdown" ngbDropdown  *ngIf="(currentUser$ | async) as user">
-              <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle>Welcome {{user.username| titlecase}}</a>
+            <ul class="navbar-nav mr-left" *ngIf="(currentUser$ | async) as user">
+              <img src="{{user.photoUrl}}" alt="{{user.username}}">
+            <li class="nav-item dropdown" ngbDropdown  >
+              
+              <a class="nav-link dropdown-toggle ml-2" id="id01"  ngbDropdownToggle>Welcome {{user.username| titlecase}}</a>
               <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-                <a class="dropdown-item" >Edit Profile</a>
+                <a class="dropdown-item" routerLinkActive='active' href="/member/edit" >Edit Profile</a>
                 <a class="dropdown-item" >Message</a>
                 <a class="dropdown-item"  (click)="logout()">Logout</a>
               </div>

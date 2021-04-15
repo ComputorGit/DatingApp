@@ -9,12 +9,12 @@
 
 
 div#one { background: #4E62F7; }
-div#two { background: #BEBFBA; }
+/* div#two { background: #BEBFBA; } */
 
 
 @media screen and  (max-width: 531px) {
     div#one { background: green; }
-    div#two { background: #BEBFBA; }
+    /* div#two { background: #BEBFBA; } */
 
     div#two { order: 1; }
     div#one { order: 2; }
@@ -24,11 +24,16 @@ div#two { background: #BEBFBA; }
 
 @media screen and  (min-width: 800px) {
     div#one { background:red; }
-    div#two { background: #BEBFBA; } 
+    /* div#two { background: #BEBFBA; }  */
     div#two { order: 2; }
     div#one { order: 1; }
     
 }
 routerLinkActive{
     color:green;
+}
+img{
+    max-height : 50px;
+    border : 2px solid #fff;
+    display : inline;
 }

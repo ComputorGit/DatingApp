@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { User } from './_models/user';
 import { AccountService } from './_services/account.service';
 
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'client';
   appUser : any
   // constructor(private _http : HttpClient, private _accountService : AccountService){
-    constructor(private _accountService : AccountService){
+    constructor(private _accountService : AccountService,private spinnerService : NgxSpinnerService){
 
   }
 
