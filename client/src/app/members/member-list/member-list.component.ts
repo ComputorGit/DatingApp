@@ -15,6 +15,8 @@ import { MembersService } from 'src/app/_services/members.service';
 })
 export class MemberListComponent implements OnInit {
 
+  //Adding Filter and these comment is to repush the code to github
+
   members$ : Observable<Member[]>;
   members : Member[];
   pagination : Pagination;
